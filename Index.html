@@ -1,0 +1,48 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Optimization Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 50px;
+        }
+        .result {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .result h2 {
+            color: #28a745;
+        }
+        .result p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Battery Optimized!</h2>
+        <p><strong>Screen Brightness:</strong> {{ brightness }}</p>
+        <p><strong>Screen Timeout:</strong> {{ timeout }} minutes</p>
+        <p><strong>Closed Apps:</strong> {{ ', '.join(apps) }}</p>
+        <p><strong>Estimated Increase in Screen Time:</strong> {{ increased_time }} hours</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
